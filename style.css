@@ -1,64 +1,74 @@
-
-@media only screen and (max-width: 600px) {
+/* Ajout des breakpoints pour différentes tailles d'écran */
+@media only screen and (max-width: 844px) {
     body {
-        overflow: hidden;
-        height: 100vh;
+        overflow-x: hidden;  /* Empêche le scroll horizontal */
+        min-height: 100vh;
         margin: 0;
         padding: 0;
+        width: 100%;
     }
 
     .container { 
-        max-width: 400px; 
-        margin-top: 50px; 
-    }
-    .title { 
-        color: #613414;
-    }
-
-    .title.is-5{
-        margin-top: -79px;
+        width: 90%;  /* Au lieu d'une largeur fixe */
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
     }
 
-    form{
-        margin-bottom: 35px;
-    }
-
-    img{
-       
-        width: 100vw;
+    img {
+        width: 100%;
+        height: 45vh;  /* Hauteur relative plus petite */
         object-fit: cover;
         position: fixed;
         top: 0;
         left: 0;
-        height: 51vh;
-       
+        z-index: -1;
     }
 
-    .container.has-text-centered{
-        margin-top: 557px;
+    .container.has-text-centered {
+        margin-top: 45vh;  /* Aligné avec la hauteur de l'image */
+        padding: 20px;
+        background-color: white;
+        border-radius: 25px 25px 0 0;
     }
 
     input[type="text"],
     input[type="email"],
     input[type="password"],
- textarea {
-    border-radius: 18px;
-        padding: 24px;
-        background-color: #f5f3f3;
-    }
-
-    .button.is-fullwidth {
-        display: flex;
+    textarea {
         width: 100%;
-        margin-top: 33px;
-        border-radius: 18px;
-        background-color: #613414;
+        box-sizing: border-box;
+        font-size: 16px;  /* Évite le zoom sur iOS */
     }
 
-    a {
-        color: #613414;
-        cursor: pointer;
-        text-decoration: none;
+    .title.is-5 {
+        margin-top: -60px;  /* Ajusté pour meilleur espacement */
+        font-size: calc(1rem + 1vw);  /* Taille de police responsive */
     }
 }
-  
+
+/* Ajout d'un breakpoint spécifique pour les très petits écrans */
+@media only screen and (max-width: 375px) {
+    .container.has-text-centered {
+        margin-top: 40vh;
+    }
+
+    img {
+        height: 40vh;
+    }
+
+    .title.is-5 {
+        margin-top: -50px;
+    }
+}
+
+/* Ajout d'un breakpoint pour les grands téléphones */
+@media only screen and (min-width: 845px) and (max-width: 926px) {
+    .container.has-text-centered {
+        margin-top: 50vh;
+    }
+
+    img {
+        height: 50vh;
+    }
+} 
