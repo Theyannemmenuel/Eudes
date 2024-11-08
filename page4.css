@@ -1,0 +1,42 @@
+
+@media only screen and (max-width: 600px) {
+    body {
+        
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+    .brown-bg {
+    background-color: #795548 !important;
+    color: white !important;
+        }
+    .brown-text {
+        color: #795548 !important;
+    }
+    .brown-light-bg {
+        background-color: #EFEBE9 !important;
+    }
+    .status-badge {
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+    }
+    .status-validated {
+        background-color: #C8E6C9;
+        color: #2E7D32;
+    }
+    .status-pending {
+        background-color: #FFF3E0;
+        color: #E65100;
+    }
+    .donation-card:hover {
+        background-color: #f5f5f5;
+    }
+
+
+
+.columns.is-mobile {
+        display: block;
+    }
+
+}

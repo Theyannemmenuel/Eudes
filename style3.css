@@ -1,0 +1,56 @@
+@media only screen and (max-width: 600px) {
+    body {
+        overflow: hidden;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container { 
+        max-width: 400px;
+    }
+    .title { 
+        color: #613414;
+    }
+    form{
+        margin-top: 105px;
+        border-radius: 10px;
+    }   
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+ textarea {
+    border-radius: 18px;
+        padding: 24px;
+        background-color: #f5f3f3;
+    }
+
+
+    .button.is-fullwidth {
+        display: flex;
+        width: 100%;
+        margin-top: 33px;
+        border-radius: 18px;
+        background-color: #613414;
+    }
+    .title.is-5 {
+        font-size: 1.25rem;
+        margin-top: 6rem;
+    }
+
+    a {
+        color: #613414;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    p{
+        margin-top: 166px;
+        font-size: larger;
+    }
+
+    .links{
+        margin-top: 300px;
+    }
+    
+}

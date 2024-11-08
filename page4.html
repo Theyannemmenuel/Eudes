@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historique des dons</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="page4.css">
+</head>
+<body>
+    <div class="container is-max-desktop p-5">
+        <!-- Header Section -->
+        <div class="mb-6">
+            <h1 class="title is-3 brown-text">Historique de vos dons</h1>
+            <div class="columns">
+                <div class="column is-8">
+                    <div class="columns">
+                        <div class="column">
+                            <div class="box brown-light-bg">
+                                <p class="is-size-7 brown-text">Total des dons</p>
+                                <p class="is-size-4 has-text-weight-bold brown-text">20 000 FCFA</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="box brown-light-bg">
+                                <p class="is-size-7 brown-text">Reçus fiscaux</p>
+                                <p class="is-size-4 has-text-weight-bold brown-text">2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <button class="button brown-bg is-fullwidth">
+                        <span class="icon">
+                            <i class="fas fa-download"></i>
+                        </span>
+                        <span>Télécharger mes reçus</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Card -->
+        <div class="card">
+            <header class="card-header">
+                <p class="card-header-title brown-text">
+                    Détail des dons
+                </p>
+                <button class="button is-small m-2">
+                    <span class="icon is-small">
+                        <i class="fas fa-filter"></i>
+                    </span>
+                    <span>Filtrer</span>
+                </button>
+            </header>
+            <div class="card-content">
+                <!-- Tabs -->
+                <div class="tabs">
+                    <ul id="donationTabs">
+                        <li class="is-active" data-tab="all"><a>Tous les dons</a></li>
+                        <li data-tab="pending"><a>En cours</a></li>
+                        <li data-tab="completed"><a>Validés</a></li>
+                    </ul>
+                </div>
+
+                <!-- Donations List -->
+                <div id="donationsList" class="space-y-4">
+                    <!-- Donations will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const donations = [
+            { date: "2024-03-15", montant: 10000, projet: "Construction de l'église", statut: "Validé", reçu: true },
+            { date: "2024-02-28", montant: 5000, projet: "Œuvres caritatives", statut: "Validé", reçu: true },
+            { date: "2024-01-10", montant: 5000, projet: "Restauration chapelle", statut: "En cours", reçu: false },
+        ];
+
+        function createDonationCard(don) {
+            const date = new Date(don.date).toLocaleDateString();
+            return `
+                <div class="box donation-card">
+                    <div class="columns is-mobile is-vcentered">
+                        <div class="column">
+                            <div class="is-flex is-align-items-center">
+                                <span class="icon brown-text mr-2">
+                                    <i class="far fa-calendar"></i>
+                                </span>
+                                <div>
+                                    <p class="has-text-weight-medium">${don.projet}</p>
+                                    <p class="is-size-7 has-text-grey">${date}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-narrow">
+                            <div class="is-flex is-align-items-center">
+                                <span class="has-text-weight-bold mr-4">${don.montant} FCFA</span>
+                                <span class="status-badge ${don.statut === 'Validé' ? 'status-validated' : 'status-pending'} mr-4">
+                                    ${don.statut}
+                                </span>
+                                ${don.reçu ? `
+                                    <button class="button is-ghost">
+                                        <span class="icon brown-text">
+                                            <i class="fas fa-download"></i>
+                                        </span>
+                                    </button>
+                                ` : ''}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderDonations(filter = 'all') {
+            const donationsList = document.getElementById('donationsList');
+            let filteredDonations = donations;
+            
+            if (filter === 'pending') {
+                filteredDonations = donations.filter(don => don.statut === 'En cours');
+            } else if (filter === 'completed') {
+                filteredDonations = donations.filter(don => don.statut === 'Validé');
+            }
+            
+            donationsList.innerHTML = filteredDonations
+                .map(don => createDonationCard(don))
+                .join('');
+        }
+
+        // Tab switching functionality
+        document.querySelectorAll('#donationTabs li').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                document.querySelectorAll('#donationTabs li').forEach(t => t.classList.remove('is-active'));
+                tab.classList.add('is-active');
+                
+                // Render donations with filter
+                renderDonations(tab.dataset.tab);
+            });
+        });
+
+        // Initial render
+        renderDonations();
+    </script>
+</body>
+</html>

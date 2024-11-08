@@ -1,0 +1,64 @@
+
+@media only screen and (max-width: 600px) {
+    body {
+        overflow: hidden;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container { 
+        max-width: 400px; 
+        margin-top: 50px; 
+    }
+    .title { 
+        color: #613414;
+    }
+
+    .title.is-5{
+        margin-top: -79px;
+    }
+
+    form{
+        margin-bottom: 35px;
+    }
+
+    img{
+       
+        width: 100vw;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 51vh;
+       
+    }
+
+    .container.has-text-centered{
+        margin-top: 557px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+ textarea {
+    border-radius: 18px;
+        padding: 24px;
+        background-color: #f5f3f3;
+    }
+
+    .button.is-fullwidth {
+        display: flex;
+        width: 100%;
+        margin-top: 33px;
+        border-radius: 18px;
+        background-color: #613414;
+    }
+
+    a {
+        color: #613414;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+  
