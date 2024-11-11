@@ -126,3 +126,15 @@
         position: relative;
     }
 }
+
+
+@media only screen and (max-width: 390px) and (max-height: 844px) {
+    /* Styles spécifiques pour l'iPhone 12 et 12 Pro */
+    .container.has-text-centered {
+        margin-top: 35vh;
+
+    }
+    body {
+        viewport-fit: cover; 
+    }
+}
