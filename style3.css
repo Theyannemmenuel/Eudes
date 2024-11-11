@@ -1,56 +1,124 @@
-@media only screen and (max-width: 600px) {
+/* Pour les mobiles */
+@media only screen and (max-width: 767px) {
     body {
-        overflow: hidden;
-        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        min-height: 100vh;
         margin: 0;
         padding: 0;
+        position: relative;
     }
 
     .container { 
+        width: 90%;
         max-width: 400px;
+        margin: 0 auto;
+        padding: 0 15px;
+        position: relative;
     }
+
     .title { 
         color: #613414;
+        margin-bottom: 1rem;
     }
-    form{
-        margin-top: 105px;
+
+    form {
+        margin: 15vh auto 20px; /* Utilisation de vh pour une meilleure adaptation */
+        padding: 15px;
         border-radius: 10px;
+        width: 100%;
+        max-width: 350px;
     }   
+
     input[type="text"],
     input[type="email"],
     input[type="password"],
- textarea {
-    border-radius: 18px;
-        padding: 24px;
+    textarea {
+        border-radius: 18px;
+        padding: 12px 18px;
         background-color: #f5f3f3;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 15px;
     }
-
 
     .button.is-fullwidth {
         display: flex;
         width: 100%;
-        margin-top: 33px;
+        margin: 20px 0;
+        padding: 12px;
         border-radius: 18px;
         background-color: #613414;
+        justify-content: center;
+        align-items: center;
     }
+
     .title.is-5 {
-        font-size: 1.25rem;
-        margin-top: 6rem;
+        font-size: 1.1rem;
+        margin-top: 3rem; /* Utilisation de rem au lieu de valeurs fixes */
+        padding: 0 10px;
     }
 
     a {
         color: #613414;
         cursor: pointer;
         text-decoration: none;
+        display: inline-block;
+        padding: 5px;
     }
 
-    p{
-        margin-top: 166px;
-        font-size: larger;
+    p {
+        margin-top: 10vh; /* Utilisation de vh au lieu de pixels */
+        font-size: 1.1rem;
+        padding: 0 10px;
     }
 
-    .links{
-        margin-top: 300px;
+    .links {
+        margin-top: 15vh; /* Utilisation de vh au lieu de pixels fixes */
+        padding: 15px;
     }
-    
+}
+
+/* Pour les très petits écrans */
+@media only screen and (max-width: 320px) {
+    form {
+        margin-top: 10vh;
+    }
+
+    .title.is-5 {
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+
+    p {
+        margin-top: 8vh;
+        font-size: 1rem;
+    }
+
+    .links {
+        margin-top: 12vh;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        padding: 10px 15px;
+    }
+}
+
+/* Pour les tablettes */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 600px;
+    }
+
+    form {
+        max-width: 500px;
+        margin-top: 12vh;
+    }
+
+    .links {
+        margin-top: 18vh;
+    }
 }
