@@ -245,3 +245,80 @@
         margin-top: 3px;
     }
 }
+
+/* iPhone SE (375x667) */
+@media only screen and (device-width: 375px) and (device-height: 667px),
+       only screen and (width: 375px) and (height: 667px) {
+    body {
+        overflow: hidden;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+    }
+
+    img {
+        height: 40vh; /* Plus petit pour SE */
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .container.has-text-centered {
+        margin-top: calc(40vh - 20px);
+        background-color: white;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .title.is-5 {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    form {
+        margin: 10px auto;
+        max-width: 300px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        padding: 10px 15px;
+        margin-bottom: 8px;
+    }
+
+    .button.is-fullwidth {
+        margin: 12px 0;
+        padding: 10px;
+    }
+}
+
+/* iPhone 12, 12 Pro (390x844) */
+@media only screen and (device-width: 390px) and (device-height: 844px),
+       only screen and (width: 390px) and (height: 844px) {
+    body {
+        overflow: hidden;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+    }
+
+    img {
+        height: 45vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .container.has-text-centered {
+        margin-top: calc(45vh - 20px);
+    }
+
+    .title.is-5 {
+        font-size: 1.1rem;
+        margin: 10px 0;
+    }
+
+    form {
+        margin: 15px auto;
+        max-width: 320px;
+    }
+}
