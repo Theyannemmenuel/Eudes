@@ -7,7 +7,7 @@
         padding: 0;
     }
     .brown-bg {
-    background-color: #795548 !important;
+    background-color: #F9CE8C !important;
     color: white !important;
         }
     .brown-text {
@@ -39,4 +39,40 @@
         display: block;
     }
 
+}
+
+
+
+.back-button {
+    top: 20px;
+    left: 15px;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F9CE8C; /* Utilise la même couleur que votre thème */
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+.back-button:active {
+    transform: scale(0.95);
+}
+
+/* Ajustement pour iPhone SE */
+@media only screen and (device-width: 375px) and (device-height: 667px) {
+    .back-button {
+        top: 15px;
+        left: 10px;
+        width: 35px;
+        height: 35px;
+    }
 }
