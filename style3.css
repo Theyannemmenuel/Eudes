@@ -64,9 +64,11 @@
     }
 
     .title.is-5 {
-        font-size: 1.1rem;
-        margin-top: 3rem; /* Utilisation de rem au lieu de valeurs fixes */
-        padding: 0 10px;
+        margin: 15px 0;
+        /*padding: 0 10px;*/
+        font-size: 1.1rem; /* Taille relative */
+        margin-left: -27px;
+        white-space: nowrap;
     }
 
     a {

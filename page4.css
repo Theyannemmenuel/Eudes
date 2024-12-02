@@ -6,6 +6,15 @@
         margin: 0;
         padding: 0;
     }
+
+    .title.is-5 {
+        margin: 15px 0;
+        /*padding: 0 10px;*/
+        font-size: 1.1rem; /* Taille relative */
+        margin-left: -27px;
+        white-space: nowrap;
+    }
+    
     .brown-bg {
     background-color: #F9CE8C !important;
     color: white !important;

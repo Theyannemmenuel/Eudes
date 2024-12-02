@@ -38,7 +38,7 @@
         /*padding: 0 10px;*/
         font-size: 1.1rem; /* Taille relative */
 
-        margin-left: -24px;
+        margin-left: -27px;
         white-space: nowrap;
     }
 
@@ -341,7 +341,7 @@
     .title.is-5 {
         font-size: 1.1rem;
         margin: 10px 0;
-        margin-left: -24px;
+        margin-left: -27px;
         white-space: nowrap;
     }
 

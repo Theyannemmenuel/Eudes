@@ -7,21 +7,31 @@
         padding: 0 15px;
     }
 
+    .section {
+        padding: 1rem 0.5rem;
+    }
+
     .title { 
        
         font-size: 1.25rem;
         margin-bottom: 1rem;
+    }
+    .field:not(:last-child) {
+        text-align: left;
     }
 
     .title.is-2 {
         color: #F9CE8C;
     }
 
-    title.is-5 {
-        font-size: 1.25rem;
-        color: #613414;
-
+    .title.is-5 {
+        margin: 15px 0;
+        /*padding: 0 10px;*/
+        font-size: 1.1rem; /* Taille relative */
+        margin-left: -27px;
+        white-space: nowrap;
     }
+
     form {
         margin: 20px auto;
         padding: 15px;
