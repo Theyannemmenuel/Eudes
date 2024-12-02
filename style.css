@@ -1,6 +1,6 @@
 @media only screen and (max-width: 767px) {
     body {
-        overflow-x: hidden; /* Permet le scroll vertical mais empêche horizontal */
+        overflow: hidden; 
         min-height: 100vh;
         margin: 0;
         padding: 0;
@@ -28,7 +28,7 @@
 
     .container.has-text-centered {
         margin-top: calc(45vh + -10px); /* Calcul relatif à la hauteur de l'image */
-        background-color: transparent 
+        background-color: transparent ;
         border-radius: 20px 20px 0 0;
         padding: 20px 15px;
     }
@@ -126,7 +126,7 @@
         object-position: center; /* Centrer l'image dans le conteneur */
     }
     body {
-        overflow-x: hidden; /* Permet le scroll vertical mais empêche horizontal */
+        overflow: hidden; 
         min-height: 100vh;
         margin: 0;
         padding: 0;
@@ -303,7 +303,7 @@
 @media only screen and (device-width: 390px) and (device-height: 844px),
        only screen and (width: 390px) and (height: 844px) {
     body {
-        overflow-x: hidden; /* Empêche le scroll horizontal */
+        overflow: hidden; 
         min-height: 100vh;
         margin: 0;
         padding: 0;
