@@ -4,7 +4,7 @@
         min-height: 100vh;
         margin: 0;
         padding: 0;
-        position: relative;
+        position: fixed;
     }
 
     .container { 
@@ -130,7 +130,7 @@
         min-height: 100vh;
         margin: 0;
         padding: 0;
-        position: relative;
+        position: fixed;
     }
 }
 
@@ -307,7 +307,7 @@
         min-height: 100vh;
         margin: 0;
         padding: 0;
-        position: relative; /* Change fixed à relative */
+        position: fixed;
         width: 100%;
     }
     .section {
